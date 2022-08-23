@@ -1,2 +1,3 @@
 # estudo-em-grupo
 Apenas para teste/estudo e afins
+Quando houver conflito na hora de fazer o git push, tente o git merge pra mostra/fazer alterações antes de upar
