@@ -5,6 +5,7 @@ use sprint1;
 Create table Gerenciamento_de_Insulina (
 Lote int primary key,
 qntporLote varchar(40),
+
 PreçoLote decimal(6,3),
 ValorDose decimal(5,2)
 );
