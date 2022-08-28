@@ -1,5 +1,5 @@
 use sprint1;
-
+-- teste
 create table curso(
 	idCurso int primary key auto_increment,
     nome varchar(50),
