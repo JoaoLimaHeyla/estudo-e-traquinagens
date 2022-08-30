@@ -1,5 +1,5 @@
 # estudo-em-grupo
-Apenas para teste/estudo e afins <br>
+Trabalho do primeiro semestre <br>
 Quando houver conflito na hora de fazer o git push, tente o git merge pra mostra/fazer alterações antes de upar
 Tutorialzinho pro git merge:
 Quando aparecer a telinha pra você comentar (letras amarelas e azuis)
