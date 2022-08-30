@@ -1,6 +1,6 @@
 # estudo-em-grupo
 Trabalho do primeiro semestre <br>
-Quando houver conflito na hora de fazer o git push, tente o git merge pra mostra/fazer alterações antes de upar
+Quando houver conflito na hora de fazer o git push, tente o git merge pra mostrar/fazer alterações antes de upar
 Tutorialzinho pro git merge:
 Quando aparecer a telinha pra você comentar (letras amarelas e azuis)
 Aperte "i" pra dar insert (inserir sua mensagem sobre o que mudou)
