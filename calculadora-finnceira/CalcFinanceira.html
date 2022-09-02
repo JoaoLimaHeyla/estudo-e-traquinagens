@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Financeira</title>
+    </head>
+    <body>
+
+    Insira o nome do remédio:
+    <p><input id="nome"></p>
+
+    Insira o valor do lote:
+    <p><input id="valor"></p>
+
+    Insira a quantidade do lote:
+    <p><input id="quantidade"></p>
+
+    Insira o quanto perdeu no ultimo lote:
+    <p><input id="perca"></p>
+
+    <p><button onclick="calcular()">
+        Calcular
+    </button></p>
+    <div id="calculo">
+    </div><br>
+
+    </body>
+
+    <script>
+        function calcular(){
+            var resultado =  Number(valor.value)/Number(quantidade.value)
+            var gastos = (Number(quantidade.value)-Number(perca.value)) * resultado
+            var percas = resultado * gastos / 100
+            calculo.innerHTML =
+            `O valor unitário de cada ${nome.value}, é de ${resultado}R$, dando um total de ${percas}% de perca total`
+        };
+    </script>
+</html>
