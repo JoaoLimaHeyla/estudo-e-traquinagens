@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora financeira</title>
+</head>
+<body>
+
+Informe o nome do medicamento de alto custo:
+<input id="nome_medicamento"><br>
+    
+Informe o valor de uma única dose do seu medicamento:
+<input id="valor_dose"><br>
+
+Informe a quantidade deste medicamento por unidade de lote:
+<input id="quantidade_lote"><br>
+
+informe quantas destas doses você perdeu: 
+<input id="quantidade_perdas"><br>
+
+<button onclick="calcular()">Calcular</button>
+<!-- <button onclick="limpar()">Resetar conta</button> -->
+
+<div id="resultado">
+
+</div>
+
+</body>
+</html>
+<script>
+    function calcular() {
+        var valor_dose = Number(valor_dose.value);
+        var qtd_lote = Number(quantidade_lote.value);
+        var qtd_perda = Number(quantidade_perdas.value);
+
+        var investimento = (valor_dose*qtd_lote);
+        var prejúizo = ((qtd_perda*valor_dose)-investimento);
+
+        resultado.innerHTML =  `
+        Sua empresa investiu $R${investimento} em um único lote contendo ${qtd_lote} doses.
+        Ao perder ${qtd_perda} doses de ${nome_medicmento.value}
+        houve um prejúizo de  $R${prejúizo}.
+        `
+    }
+</script>
