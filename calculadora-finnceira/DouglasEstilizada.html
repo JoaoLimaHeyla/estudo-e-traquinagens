@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TermoMed</title>
+</head>
+<style>
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: 0;
+        }
+    body {
+         width: 100vw;
+         height: 100vh;
+         background-image: url(https://www.bing.com/images/blob?bcid=ToV4gUVZGZsElg);
+         background-size: 100%;
+         }
+
+</style>
+<body>
+     <!-- ultilizado as tags <br> somente para centralizar de uma forma facil-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+     <!-- colocamos uma DIVisão para não ficar muito no topo-->
+     <div>
+             <!-- Estamos ESTILIZANDO colocando ele no centro-->
+         <div style="display: flex; justify-content: center;">
+
+             <!-- Estamos aliando o TEXTO no CENTRO-->
+             <h1 style="text-align: center;">Simulador Financeiro</h1>
+
+             <!--Divisão para não ficar grudado-->
+         </div>
+
+          <!--Br é para que pule a linha e não fique na mesma linha-->
+         <br>
+
+         <!-- Estamos ESTILIZANDO colocando toda está div e suas frases no meio-->
+         <!-- Logo após temos os inputs e os botão-->
+         <div style="display: flex; justify-content: center;">
+            <div>
+                 Insira a quantidade de lotes:<br>
+                 <input type='Number' id="input_quantdlote">
+                 <br>
+                 Insira o valor do lote:<br>
+                  <input type='Number' id="input_precolote">
+                 <br>
+                 A quantidade de lote perdido: <br>
+                 <input type='Number' id="input_loteperdido">
+                 <br>
+                 <button onclick="total()" style="width: 100%; margin-top: 10px; border-radius: 5px; padding: 7px;">
+                 Calcular</button>
+                 <br>
+                 <button onclick="limpar()" style="width: 100%; margin-top: 10px; border-radius: 5px; padding: 7px;">
+                 Limpar resultado
+             </div>
+            </button>
+         </div>         
+    </div>
+</div>
+<br>
+         <!-- O sistema vai depender aparecer a frase ultilizando estes Ids: -->
+     <div style="display: flex; justify-content: center;">
+            <div id="div_valorTotal">
+                 <span id="span_despesa"></span>
+             </div>
+     </div>
+</body>
+</html>
+<script>
+    function total(){
+        var loteperdido = Number(input_loteperdido.value);
+        //transformando em numero os numeros do lote perdido//
+
+        var precolote = Number(input_precolote.value);
+        //transformando em numero o preço do lote//
+
+        var qtdlote = Number(input_quantdlote.value);
+        //Transformando em numero a quantidade de lotes//
+
+        precototal = precolote * qtdlote;
+        // Saber o valor TOTAL pegamos o preço do lote vezes a quantidade de lote//
+
+        perdido = (loteperdido * precototal) / qtdlote;
+        // Pegamos a quantidade de lote perdido vezes o preçototal e divide por quantidade do lote//
+
+        porcentagem = ( loteperdido / qtdlote  ) * 100; 
+        // Descobrir a porcentagem dividimos o lote perdido com a quantidade do lote vezes 100//
+
+        span_despesa.innerHTML = `Total gasto: R$${precototal} <br>
+            Tendo um prejuizo de R$${perdido}<br> 
+            (Tendo uma perda de ${porcentagem}% dos seu valor investido)`
+        //Comando para aparecer na tela o resultado//
+    }
+
+    function limpar(){
+        span_despesa.innerHTML = ` `
+        //limpar a tela para ser inserido outro valor// 
+
+    }
+</script>
