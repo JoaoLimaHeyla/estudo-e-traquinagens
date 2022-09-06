@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de lotes <input id="input_qtd_lotes"> <br>
+    Insira o valor por lote <input id="input_valor_lote"> <br>
+    <button onclick="calcular_perda()">
+    Calcular possível perda
+    </button><br>
+    <div id="div_possivel_perda"></div>
+</body>
+</html>
+<script>
+    function calcular_perda() {
+    var qtd_lotes = Number(input_qtd_lotes.value);
+    var valor_lote = Number(input_valor_lote.value);
+
+    var investimento = qtd_lotes * valor_lote;
+    var possivel_perda = investimento * 0.30;
+
+    div_possivel_perda.innerHTML =` De acordo com nossos cálculos, você investiu R$${investimento} e ${qtd_lotes} lotes,
+    segundo pesquisas em dados recentes a possível perda que você teria devido má manutenção de temperatura seria de R$${possivel_perda},
+    nosso produto foi desenvolvido para reduzir ao máximo essas perdas causadas por esse motivo.`
+
+    }
+</script>
