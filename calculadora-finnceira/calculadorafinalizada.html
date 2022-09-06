@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TermoMed</title>
+</head>
+<style>
+
+</style>
+<body>
+     <!-- ultilizado as tags <br> somente para centralizar de uma forma facil-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+     <!-- colocamos uma DIVisão para não ficar muito no topo-->
+     <div>
+             <!-- Estamos ESTILIZANDO colocando ele no centro-->
+         <div style="display: flex; justify-content: center;">
+
+             <!-- Estamos aliando o TEXTO no CENTRO-->
+             <h1 style="text-align: center;">Simulador Financeiro</h1>
+
+             <!--Divisão para não ficar grudado-->
+         </div>
+
+          <!--Br é para que pule a linha e não fique na mesma linha-->
+         <br>
+
+         <!-- Estamos ESTILIZANDO colocando toda está div e suas frases no meio-->
+         <!-- Logo após temos os inputs e os botão-->
+         <div style="display: flex; justify-content: center;">
+            <div>
+                 Insira a quantidade de lotes:<br>
+                 <input type='Number' id="input_quantdlote">
+                 <br>
+                 Insira o valor do lote:<br>
+                  <input type='Number' id="input_precolote">
+                 <br>
+                 <button onclick="total()" style="width: 100%; margin-top: 10px; border-radius: 5px; padding: 7px;">
+                 Calcular</button>
+                 <br>
+                 <button onclick="limpar()" style="width: 100%; margin-top: 10px; border-radius: 5px; padding: 7px;">
+                 Limpar resultado
+             </div>
+            </button>
+         </div>         
+    </div>
+</div>
+<br>
+         <!-- O sistema vai depender aparecer a frase ultilizando estes Ids: -->
+     <div style="display: flex; justify-content: center;">
+          <b>  <div id="div_valorTotal" style="text-align: center">
+             </div></b>
+     </div>
+</body>
+</html>
+<script>
+    function total(){
+        var precolote = Number(input_precolote.value);
+        //transformando em numero o preço do lote//
+
+        var qtdlote = Number(input_quantdlote.value);
+        //Transformando em numero a quantidade de lotes//
+
+        var precototal = precolote * qtdlote;
+        // Saber o valor TOTAL pegamos o preço do lote vezes a quantidade de lote//
+
+        var precoperdido = precototal * 0.30;
+        // segundo a controladoria geral da união farmacias tendem a perder 30% do valor do produto //
+
+        div_valorTotal.innerHTML = `Cada centavo seu é muito importante, e poupar seu dinheiro <br>
+        é possível através da TermoMed, com seu investimento de R$${precototal} ultilizando pesquisas<br>
+        recentes é possivel que você tenha uma perda de R$${precoperdido} por má manuntenção  de temperatura<br>
+        a TermoMed vai reduzir esta perda.`
+        //Comando para aparecer na tela o resultado//
+    }
+
+    function limpar(){
+        span_despesa.innerHTML = ` `
+        //limpar a tela para ser inserido outro valor// 
+
+    }
+</script>
