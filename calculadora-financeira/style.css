@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+    font-family: montserrat, arial, verdana;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(56,97,140,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+  
+
+
+input{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+button{
+    width: 100px;
+    background: #38618C;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+ 
+}
+
+p{
+    width: 60%;
+}
+
+#valorTotal{
+    width: 65%;
+}
+
+
+#principal{
+background-color: white;
+width: 50%;
+margin-left: auto;
+margin-right: auto; 
+padding: 2em;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#valorTotal{
+    margin-top: 10px;
+}
